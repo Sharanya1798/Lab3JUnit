@@ -1,0 +1,17 @@
+2021-02-06 23:02:16.786 [EmailAddress.java] INFO  EmailAddress - Verifying Email address shubham@iiitb.org
+2021-02-06 23:02:16.790 [EmailAddress.java] INFO  EmailAddress - Verifying Email address shubham#123@iiitb.com
+2021-02-06 23:02:16.791 [EmailAddress.java] INFO  EmailAddress - Verifying Email address shubham#iiitb.com
+2021-02-06 23:02:16.796 [EmailAddress.java] INFO  EmailAddress - Verifying Email address shubham@iiitb.org
+2021-02-06 23:02:16.796 [EmailAddress.java] INFO  EmailAddress - Verifying Email address shubham#123@iiitb.com
+2021-02-06 23:02:16.797 [EmailAddress.java] INFO  EmailAddress - Verifying Email address shubham#iiitb.com
+2021-02-06 23:02:16.799 [IPAddress.java] INFO  IPAddress - Verifying IP address 192.1.2.3.4
+2021-02-06 23:02:16.799 [IPAddress.java] INFO  IPAddress - Verifying IP address 0.1.2.3
+2021-02-06 23:02:16.816 [Multiplication.java] INFO  Multiplication - Multiplication operation for numbers 1 and 2
+2021-02-06 23:02:16.817 [Multiplication.java] INFO  Multiplication - Multiplication operation for numbers 2 and 5
+2021-02-06 23:02:16.818 [Multiplication.java] INFO  Multiplication - Multiplication operation for numbers 0 and 10
+2021-02-06 23:02:16.822 [IPAddress.java] INFO  IPAddress - Verifying IP address 192.1.2.3.4
+2021-02-06 23:02:16.822 [IPAddress.java] INFO  IPAddress - Verifying IP address 0.1.2.3
+2021-02-06 23:02:51.656 [EmailAddress.java] INFO  EmailAddress - Verifying Email address shubham@iiitb.org
+2021-02-06 23:02:51.660 [EmailAddress.java] INFO  EmailAddress - Verifying Email address shubham#123@iiitb.com
+2021-02-06 23:02:51.661 [EmailAddress.java] INFO  EmailAddress - Verifying Email address shubham#iiitb.com
+2021-02-06 23:05:54.949 [EmailAddress.java] INFO  EmailAddress - Verifying Email address shubham#123@iiitb.com
