@@ -3,7 +3,7 @@ import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("What you want to test\nPress 1 for Square Root\nPress 2 for IP address\nPress 3 for Multiplication\n");
+        System.out.println("What you want to test\nPress 1 for Square Root\nPress 2 for Factorial function\nPress 3 for Multiplication\n");
         System.out.print("Enter your choice: ");
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -13,6 +13,15 @@ public class Main {
             System.out.println("Enter any number");
             double number = scanner.nextDouble();
             System.out.println("Square root of given number is"+Math.sqrt(number));
+        } else if(choice == 2)
+        {
+            System.out.println("Enter a number for finding Factorial");
+            double number = scanner.nextDouble();
+            int fact = 1, i;
+            for(i=1; i<=number; i++){
+                fact = fact*i;
+            }
+            System.out.println("Factorial of given number is"+fact);
         }
 
     }
