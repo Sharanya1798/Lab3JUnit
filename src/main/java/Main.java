@@ -9,7 +9,7 @@ public class Main {
     public static double factorialFunction(double number)
     {
         if(number < 0)
-            return Math.sqrt(-1);
+            return Double.NaN;
         double fact = 1, i;
         for(i=1; i<=number; i++){
             fact = fact*i;
@@ -22,6 +22,8 @@ public class Main {
     }
     public static double powerFunction(double number, double power)
     {
+        if(number == 0 && power == 0)
+            return Double.NaN;
         return Math.pow(number, power);
     }
     public static void main(String[] args) {
