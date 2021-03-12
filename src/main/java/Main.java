@@ -44,6 +44,7 @@ public class Main {
                 double power = scanner.nextDouble();
                 powerFunction(number, power);
                 break;
+            default: System.out.println("Invalid choice made");
         }
     }
 }
