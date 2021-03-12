@@ -2,30 +2,30 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class Main {
-    public static void sqrtFunction(double number)
+    public static double sqrtFunction(double number)
     {
-        System.out.println("Square root of given number is "+Math.sqrt(number));
+        return Math.sqrt(number);
     }
-    public static void factorialFunction(double number)
+    public static double factorialFunction(double number)
     {
-        int fact = 1, i;
+        double fact = 1, i;
         for(i=1; i<=number; i++){
             fact = fact*i;
         }
-        System.out.println("Factorial of given number is "+fact);
+        return fact;
     }
-    public static void naturalLogFunction(double number)
+    public static double naturalLogFunction(double number)
     {
-        System.out.println("Natural logarithm of the given number is "+Math.log(number));
+        return Math.log(number);
     }
-    public static void powerFunction(double number, double power)
+    public static double powerFunction(double number, double power)
     {
-        System.out.println("The result obtained is "+Math.pow(number, power));
+        return Math.pow(number, power);
     }
     public static void main(String[] args) {
         while(true)
         {
-            System.out.println("Select your choice\n1. Square Root\n2. Factorial function\n3. Natural logarithm(ln(x))\n4. Power function\n5. Exit");
+            System.out.println("\n\n--------------Select your choice---------------\n1. Square Root\n2. Factorial function\n3. Natural logarithm(ln(x))\n4. Power function\n5. Exit");
             System.out.print("Enter your choice: ");
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
@@ -38,18 +38,18 @@ public class Main {
             double number = scanner.nextDouble();
             switch (choice) {
                 case 1:
-                    sqrtFunction(number);
+                    System.out.println("Square root of given number is "+sqrtFunction(number));
                     break;
                 case 2:
-                    factorialFunction(number);
+                    System.out.println("Factorial of given number is "+factorialFunction(number));
                     break;
                 case 3:
-                    naturalLogFunction(number);
+                    System.out.println("Natural logarithm of the given number is "+naturalLogFunction(number));
                     break;
                 case 4:
                     System.out.println("Enter the power");
                     double power = scanner.nextDouble();
-                    powerFunction(number, power);
+                    System.out.println("The result obtained is "+powerFunction(number, power));
                     break;
                 default: System.out.println("Invalid choice made");
             }
