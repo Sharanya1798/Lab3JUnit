@@ -9,7 +9,7 @@ public class Main {
     public static double factorialFunction(double number)
     {
         if(number < 0)
-            return 2.0/0;
+            return Math.sqrt(-1);
         double fact = 1, i;
         for(i=1; i<=number; i++){
             fact = fact*i;
