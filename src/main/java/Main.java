@@ -1,13 +1,21 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 import java.lang.Math;
 
 public class Main {
+    private static final Logger logger = LogManager.getLogger(EmailAddress.class);
+
     public static double sqrtFunction(double number)
     {
+        logger.info("Verifying squareRoot Function for "+number);
         return Math.sqrt(number);
     }
     public static double factorialFunction(double number)
     {
+        logger.info("Verifying factorial Function for "+number);
+
         if(number < 0)
             return Double.NaN;
         double fact = 1, i;
@@ -18,10 +26,13 @@ public class Main {
     }
     public static double naturalLogFunction(double number)
     {
+        logger.info("Verifying natural logarithm Function for "+number);
         return Math.log(number);
     }
     public static double powerFunction(double number, double power)
     {
+        logger.info("Verifying power Function for "+number+"and power"+power);
+
         if(number == 0 && power == 0)
             return Double.NaN;
         return Math.pow(number, power);
