@@ -27,6 +27,11 @@ public class Main {
         System.out.print("Enter your choice: ");
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
+        if(choice < 1 || choice > 4)
+        {
+            System.out.println("Invalid choice maid");
+            return;
+        }
         System.out.println("Enter any number");
         double number = scanner.nextDouble();
         switch (choice) {
