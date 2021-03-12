@@ -23,33 +23,36 @@ public class Main {
         System.out.println("The result obtained is "+Math.pow(number, power));
     }
     public static void main(String[] args) {
-        System.out.println("What you want to test\nPress 1 for Square Root\nPress 2 for Factorial function\nPress 3 for Natural logarithm(ln(x))\nPress 4 for Power function\n");
-        System.out.print("Enter your choice: ");
-        Scanner scanner = new Scanner(System.in);
-        int choice = scanner.nextInt();
-        if(choice < 1 || choice > 4)
+        while(true)
         {
-            System.out.println("Invalid choice maid");
-            return;
-        }
-        System.out.println("Enter any number");
-        double number = scanner.nextDouble();
-        switch (choice) {
-            case 1:
-                sqrtFunction(number);
-                break;
-            case 2:
-                factorialFunction(number);
-                break;
-            case 3:
-                naturalLogFunction(number);
-                break;
-            case 4:
-                System.out.println("Enter the power");
-                double power = scanner.nextDouble();
-                powerFunction(number, power);
-                break;
-            default: System.out.println("Invalid choice made");
+            System.out.println("Select your choice\n1. Square Root\n2. Factorial function\n3. Natural logarithm(ln(x))\n4. Power function\n5. Exit");
+            System.out.print("Enter your choice: ");
+            Scanner scanner = new Scanner(System.in);
+            int choice = scanner.nextInt();
+            if(choice == 5)
+            {
+                System.out.println("exit done");
+                return;
+            }
+            System.out.println("Enter any number");
+            double number = scanner.nextDouble();
+            switch (choice) {
+                case 1:
+                    sqrtFunction(number);
+                    break;
+                case 2:
+                    factorialFunction(number);
+                    break;
+                case 3:
+                    naturalLogFunction(number);
+                    break;
+                case 4:
+                    System.out.println("Enter the power");
+                    double power = scanner.nextDouble();
+                    powerFunction(number, power);
+                    break;
+                default: System.out.println("Invalid choice made");
+            }
         }
     }
 }
