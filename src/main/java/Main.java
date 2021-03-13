@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class Main {
-    private static final Logger logger = LogManager.getLogger(EmailAddress.class);
+    private static final Logger logger = LogManager.getLogger(Main.class);
 
     public static double sqrtFunction(double number)
     {
