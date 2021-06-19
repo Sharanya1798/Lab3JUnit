@@ -40,7 +40,7 @@ public class Main {
     public static void main(String[] args) {
         while(true)
         {
-            System.out.println("\n\n--------------Select your choice---------------\n1. Square Root\n2. Factorial function\n3. Natural logarithm(ln(x))\n4. Power function\n5. Exit");
+            System.out.println("\n\n--------------Select your choice below---------------\n1. Square Root\n2. Factorial function\n3. Natural logarithm(ln(x))\n4. Power function\n5. Exit");
             System.out.print("Enter your choice: ");
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
