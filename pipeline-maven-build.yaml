@@ -22,30 +22,30 @@ spec:
     - name: maven-build
       steps:
         - name: run-build
-        image: $(params.run-build-image)
-        env:
-          - name: PIPELINE_DEBUG
-            value: $(params.pipeline-debug)
-          - name: CUSTOM_SCRIPT
-            value: $(params.custom-script)
-        workingDir: "/artifacts"
-        script: |
-          #!/bin/bash
-          set -e -o pipefail;
-          if [ $PIPELINE_DEBUG == 1 ]; then
-            pwd
-            env
-            trap env EXIT
-            set -x
-          fi
-          if [ -z "$CUSTOM_SCRIPT" ]; then
-            if [[ -n $(find /artifacts -name pom.xml) ]]; then
-              echo "Additional build required. Running Maven build."
-              mvn -B package
-            else
-              echo "No additional build script to be run."
+          image: $(params.run-build-image)
+          env:
+            - name: PIPELINE_DEBUG
+              value: $(params.pipeline-debug)
+            - name: CUSTOM_SCRIPT
+              value: $(params.custom-script)
+          workingDir: "/artifacts"
+          script: |
+            #!/bin/bash
+            set -e -o pipefail;
+            if [ $PIPELINE_DEBUG == 1 ]; then
+              pwd
+              env
+              trap env EXIT
+              set -x
             fi
-          else
-            echo "Running custom script."
-            $(params.custom-script)
-          fi
+            if [ -z "$CUSTOM_SCRIPT" ]; then
+              if [[ -n $(find /artifacts -name pom.xml) ]]; then
+                echo "Additional build required. Running Maven build."
+                mvn -B package
+              else
+                echo "No additional build script to be run."
+              fi
+            else
+              echo "Running custom script."
+              $(params.custom-script)
+            fi
