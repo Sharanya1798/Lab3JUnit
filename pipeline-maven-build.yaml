@@ -8,7 +8,7 @@ spec:
     - name: custom-script
       description: The command(s) to run the build in run-build step. It will override the default commands
       default: ""
-    - run-build-image
+    - name: run-build-image
       description: The name of the image used for the run-build step
       default: "ibmcom/pipeline-base-image:2.6"
     - name: pipeline-debug
